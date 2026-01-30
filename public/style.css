@@ -1,0 +1,119 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  height: 80vh;
+  max-height: 800px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.chat-box {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #e5ddd5; /* WhatsApp-like background */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 75%;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* User message bubble on the right */
+.user-message {
+  align-self: flex-end;
+  background-color: #dcf8c6; /* WhatsApp user bubble color */
+  color: #000;
+  border-bottom-right-radius: 4px;
+}
+
+/* Bot message bubble on the left */
+.bot-message {
+  align-self: flex-start;
+  background-color: #ffffff; /* WhatsApp recipient bubble color */
+  color: #000;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-bottom-left-radius: 4px;
+}
+
+/* --- Styling for Markdown Content --- */
+.bot-message p {
+  margin: 0;
+  padding: 0.2em 0;
+}
+.bot-message strong {
+  color: #00509d;
+}
+.bot-message ol, .bot-message ul {
+  margin: 0.5em 0;
+  padding-left: 20px;
+}
+.bot-message li {
+  margin-bottom: 0.4em;
+}
+/* --- End Markdown Styling --- */
+
+
+#chat-form {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  background-color: #f0f2f5;
+  border-top: 1px solid #ddd;
+}
+
+#user-input {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#user-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button {
+  padding: 0 25px;
+  border: none;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+}
